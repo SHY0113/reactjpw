@@ -5,6 +5,7 @@ export default class BScrollComponent extends Component {
     render() {
         return (
             <WrapperComponent ref="wrapper">
+                
                 {this.props.children}
             </WrapperComponent>
         )

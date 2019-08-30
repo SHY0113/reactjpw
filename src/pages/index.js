@@ -33,6 +33,38 @@ const Shopcar = Loadeable({
     loader:()=>import("./shopcar"),
     loading:Loading
 })
+const Purchase = Loadeable({
+    loader:()=>import("@components/purchase"),
+    loading:Loading
+})
+const Seckill = Loadeable({
+    loader:()=>import("@components/seckill"),
+    loading:Loading
+})
+const Promotion = Loadeable({
+    loader:()=>import("@components/promotion"),
+    loading:Loading
+})
+const Life = Loadeable({
+    loader:()=>import("@components/life"),
+    loading:Loading
+})
+const Fur = Loadeable({
+    loader:()=>import("@components/fur"),
+    loading:Loading
+})
+const Category = Loadeable({
+    loader:()=>import("./category"),
+    loading:Loading
+})
+const Detail = Loadeable({
+    loader:()=>import("./detail"),
+    loading:Loading
+})
+const SearchDetail = Loadeable({
+    loader:()=>import("./searchdetail"),
+    loading:Loading
+})
 
 export {
     Home,
@@ -42,5 +74,13 @@ export {
     Order,
     Register,
     Search,
-    Shopcar
+    Shopcar,
+    Purchase,
+    Seckill,
+    Promotion,
+    Life,
+    Fur,
+    Category,
+    Detail,
+    SearchDetail
 }
