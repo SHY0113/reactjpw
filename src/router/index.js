@@ -6,9 +6,11 @@ import {
     Order,
     Register,
     Search,
-    Shopcar
-} from "@pages"
-
+    Shopcar,
+    Category,
+    Detail
+} from "@pages";
+import SearchDetail from "../pages/searchdetail";
 export const tabBarRoute = [
     {
         path:"/home",
@@ -84,6 +86,30 @@ export const noTabBarRoute = [
             flag:false
         },
         name:"搜索",
+    },
+    {
+        path:"/category/:id",
+        component:Category,
+        meta:{
+            flag:false
+        },
+        name:"商品",
+    },
+    {
+        path:"/detail/:ids",
+        component:Detail,
+        meta:{
+            flag:false
+        },
+        name:"商品详情",
+    },
+    {
+        path:"/searchdetail/:value",
+        component:SearchDetail,
+        meta:{
+            flag:false
+        },
+        name:"搜索之后页面",
     }
 ]
 

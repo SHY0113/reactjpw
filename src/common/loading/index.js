@@ -6,7 +6,7 @@ export default class Loading extends Component {
             <div className="sc-RefOD ArfhZ" data-reactroot="">
                 <div className="sc-bwzfXH bHHuxq">
                     <div className="sc-htpNat eNxLeJ">
-                        <img className="sc-bdVaJa jnJxwk" src="//jp.juancdn.com/jpwebapp/images/icon/loading_bag.png" />
+                        <img className="sc-bdVaJa jnJxwk" src="//jp.juancdn.com/jpwebapp/images/icon/loading_bag.png" alt="..."/>
                         <div className="sc-bxivhb iyBqGU"></div>
                     </div>
                 </div>

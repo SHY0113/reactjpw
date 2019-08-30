@@ -6,5 +6,15 @@ module.exports = (app)=>{
         "/api",{
         target:"https://webservice.juanpi.com",
         changeOrigin:true,
+    })),
+    app.use(proxy(
+        "/cate",{
+        target:"https://m.juanpi.com",
+        changeOrigin:true,
+    })),
+    app.use(proxy(
+        "/search",{
+        target:"https://m.juanpi.com",
+        changeOrigin:true,
     }))
 }

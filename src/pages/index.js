@@ -33,6 +33,18 @@ const Shopcar = Loadeable({
     loader:()=>import("./shopcar"),
     loading:Loading
 })
+const Category = Loadeable({
+    loader:()=>import("./category"),
+    loading:Loading
+})
+const Detail = Loadeable({
+    loader:()=>import("./detail"),
+    loading:Loading
+})
+const SearchDetail = Loadeable({
+    loader:()=>import("./searchdetail"),
+    loading:Loading
+})
 
 export {
     Home,
@@ -42,5 +54,8 @@ export {
     Order,
     Register,
     Search,
-    Shopcar
+    Shopcar,
+    Category,
+    Detail,
+    SearchDetail
 }
