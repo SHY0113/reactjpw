@@ -8,14 +8,25 @@ module.exports = (app)=>{
         changeOrigin:true,
     }));
     app.use(proxy(
-        "/act",{
-            target:"https://m.juanpi.com",
-            changeOrigin:true,
-    }))
-    app.use(proxy(
         "/timebuy",{
             target:"https://mapi.juanpi.com",
             changeOrigin:true,
     }))
     //https://mapi.juanpi.com/timebuy/getTable
+    app.use(proxy(
+        "/shopcart",{
+        target:"https://m.juanpi.com",
+        changeOrigin:true,
+    })),
+    app.use(proxy(
+        "/users",{
+        target:"http://127.0.0.1:3001/",
+        changeOrigin:true,
+    })),
+    app.use(proxy(
+        "/goods",{
+        target:"http://127.0.0.1:3001/",
+        changeOrigin:true,
+    }))
 }
+

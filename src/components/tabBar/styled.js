@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const TabBarWrapper = styled.div `
+export const TabBarWrapper = styled.div`
     width:100%;
     height:.5rem;
     position:fixed;
