@@ -6,7 +6,14 @@ import {
     Order,
     Register,
     Search,
-    Shopcar
+    Shopcar,
+    Purchase,
+    Seckill,
+    Promotion,
+    Life,
+    Fur,
+    Seek,
+
 } from "@pages"
 
 export const tabBarRoute = [
@@ -84,7 +91,65 @@ export const noTabBarRoute = [
             flag:false
         },
         name:"搜索",
+    },
+    {
+        path:"/purchase",
+        component:Purchase,
+        meta:{
+            flag:false,
+        },
+        name:"最后疯抢"
+    },
+    {
+        path:"/seckill",
+        component:Seckill,
+        meta:{
+            flag:false,
+        },
+        name:"限时秒杀",
+        children:[
+            {
+                path:"/seckill/mist",
+                component:()=>import("@components/seckill")
+            },
+            {
+                path:"/seckill/tiems",
+                component:()=>import("@components/fur")
+            }
+        ]
+    },
+    {
+        path:"/promotion",
+        component:Promotion,
+        meta:{
+            flag:false,
+        },
+        name:"品牌特卖"
+    },
+    {
+        path:"/life",
+        component:Life,
+        meta:{
+            flag:false,
+        },
+        name:"生活超市"
+    },
+    {
+        path:"/fur",
+        component:Fur,
+        meta:{
+            flag:false,
+        },
+        name:"皮草专场"
+    },
+    {
+        path:"/seek",
+        component:Seek,
+        meta:{
+            flag:false,
+        },
+        name:"搜索"
     }
-]
 
+]
 export const routeConfig = tabBarRoute.concat(noTabBarRoute)
