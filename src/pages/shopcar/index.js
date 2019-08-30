@@ -146,7 +146,7 @@ class Shopcar extends Component {
         )
     }
     async componentDidMount() {
-        //let data = await api('秋季男士印花纯棉T恤',5,30,60,'https://goods1.juancdn.com/goods/190820/1/0/5d5ad63233b08932db6dde4a_800x800.jpg?iopcmd=thumbnail&type=11&height=310&width=310%7Ciopcmd=convert&Q=88&dst=jpg','格子船白','XL','3385')
+        //let data = await api('秋季男士印花纯棉T恤',5,30,60,'https://goods1.juancdn.com/goods/190820/1/0/5d5ad63233b08932db6dde4a_800x800.jpg?iopcmd=thumbnail&type=11&height=310&width=310%7Ciopcmd=convert&Q=88&dst=jpg','格子船白','XL','6253')
         this.props.handleGetGoods()
         // let data = await shopcar_api()
         // let goods = data.list

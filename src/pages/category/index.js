@@ -124,7 +124,9 @@ export default class Category extends Component {
     
     async componentDidMount() {
         let id = this.props.match.params.id
+        //console.log(id)
         let datas = await Categoryapi(id);
+        
         let title = datas.name;      
         let key = datas.key;
         console.log(key)

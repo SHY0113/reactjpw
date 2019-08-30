@@ -96,10 +96,10 @@ export default class SearchDetail extends Component {
                 })                                     
         }) 
     } 
-    componentDidUpdate(){
-        this.refs.bscroll.handleRestpullingUp()
+    // componentDidUpdate(){
+    //     this.refs.bscroll.handleRestpullingUp()
         
-    }
+    // }
     handelChange(e){
         let value=e.target.value;     
         this.setState({

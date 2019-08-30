@@ -17,6 +17,7 @@ module.exports = (app)=>{
         "/shopcart",{
         target:"https://m.juanpi.com",
         changeOrigin:true,
+        pathRewrite:{'^/shopcart':''}
     })),
     app.use(proxy(
         "/users",{
