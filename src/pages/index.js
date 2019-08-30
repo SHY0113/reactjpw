@@ -53,8 +53,16 @@ const Fur = Loadeable({
     loader:()=>import("@components/fur"),
     loading:Loading
 })
-const Seek = Loadeable({
-    loader:()=>import("@components/seek"),
+const Category = Loadeable({
+    loader:()=>import("./category"),
+    loading:Loading
+})
+const Detail = Loadeable({
+    loader:()=>import("./detail"),
+    loading:Loading
+})
+const SearchDetail = Loadeable({
+    loader:()=>import("./searchdetail"),
     loading:Loading
 })
 
@@ -72,6 +80,7 @@ export {
     Promotion,
     Life,
     Fur,
-    Seek,
-
+    Category,
+    Detail,
+    SearchDetail
 }

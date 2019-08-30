@@ -20,13 +20,22 @@ module.exports = (app)=>{
     })),
     app.use(proxy(
         "/users",{
-        target:"http://127.0.0.1:3001/",
+        target:"http://10.60.11.3:3001/",
         changeOrigin:true,
     })),
     app.use(proxy(
         "/goods",{
-        target:"http://127.0.0.1:3001/",
+        target:"http://10.60.11.3:3001/",
+        changeOrigin:true,
+    })),
+    app.use(proxy(
+        "/cate",{
+        target:"https://m.juanpi.com",
+        changeOrigin:true,
+    })),
+    app.use(proxy(
+        "/search",{
+        target:"https://m.juanpi.com",
         changeOrigin:true,
     }))
 }
-

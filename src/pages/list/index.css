@@ -1,0 +1,119 @@
+body,dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, td, textarea,th, ul {
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 100px;
+}
+body{
+    max-height: 4500rem;
+}
+li{
+    list-style: none;
+}
+#search-box{
+    color:#999;
+    font-size: 18px;
+}
+.maxList{
+    font-size: 15px;
+    color: #333;         
+    text-align: center;
+    background-color: #fff;
+    margin-top: .1rem;
+    overflow: hidden;
+}
+/* 搜索框样式 */
+#search-box{
+    line-height: .31rem;
+    height: 0.31rem;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 94%;
+    border: 1px solid #bbb;         
+    background-color: #fff;
+    display: flex;
+    position: relative;
+    height: auto;
+    overflow: hidden;
+}
+#search-box input{
+    margin-top: 0.04rem;
+    width: 100%;
+    border: none;
+    line-height: .24rem;
+    height: .24rem;
+    font-size: 0.13rem;
+}
+/* 左边tabbar */
+.leftList{
+    float: left;
+    width: .93rem;
+    height: 6.46rem;
+    background: #f9f9f9;
+    font-size: 0.14rem;
+}
+.leftList ul{
+    height: 6.8rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    text-indent: 15px;
+    padding-bottom: 49px;
+    transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);
+    transition-duration: 0ms;
+    transform: translate(0px, 0px) translateZ(0px);
+}
+.leftList li{
+    line-height: 0.46rem;
+    height: 0.46rem;
+    border-bottom: 1px solid #ebebeb;
+    cursor: pointer;
+    border-left: 4px solid #f9f9f9;
+}
+/* 右边列表 */
+.rightList{
+    height: 6.8rem;
+    float: left;
+    width: 71%;
+    font-size: 12px;
+    padding-left: 4%;
+}
+.wrapper{
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+    padding-bottom: 0.49rem;
+    font-size: 12px;
+}
+.thirdWrap{
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    padding-bottom: 49px;
+}
+.child{
+    width: 0.85rem;
+    height: 0.93rem;
+    padding: 0 5%;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.child a{
+    background: none;
+    color: #666;
+}
+.child a img{
+    width: 100%;
+    border: 0;
+}
+#activeLi{
+    color: #ff464e;
+    border-left: 4px solid #ff464e;
+    background-color: #fff;
+    z-index: 100;
+}

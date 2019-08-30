@@ -12,14 +12,13 @@ import {
     Promotion,
     Life,
     Fur,
-    Seek,
-
+    Category,
+    Detail
 } from "@pages"
 
 // import {} from "@components/mine"
 import { Collection,NoPaying,NoGroups,NoReceived,ReFund,Quan,Tuan,Info ,About,Address,Pay} from "@components/mine";
-
-
+import SearchDetail from "../pages/searchdetail";
 export const tabBarRoute = [
     {
         path: "/home",
@@ -178,7 +177,30 @@ export const noTabBarRoute = [
         },
         name: "退款/售后",
     },
-
+    {
+        path:"/category/:id",
+        component:Category,
+        meta:{
+            flag:false
+        },
+        name:"商品",
+    },
+    {
+        path:"/detail/:ids",
+        component:Detail,
+        meta:{
+            flag:false
+        },
+        name:"商品详情",
+    },
+    {
+        path:"/searchdetail/:value",
+        component:SearchDetail,
+        meta:{
+            flag:false
+        },
+        name:"搜索之后页面",
+    },
     {
         path: "/quan",
         component: Quan,
