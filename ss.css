@@ -1,0 +1,8 @@
+.ss{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    vertical-align: center;
+    position: absolute;
+    display: inline;
+}
