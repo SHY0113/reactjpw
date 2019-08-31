@@ -11,7 +11,11 @@ export const regAction = createAction("REG_LIST",(val)=>val)
 export const regAsyncAction = (username,password)=>{
     return async (dispatch)=>{
         let data = await reg_api(username,password);
+        alert(data.data.info)
         dispatch(regAction({username,password,data}))
+        if(data.data.info==='注册成功'){
+            window.location.href='http://localhost:3000/#/login'
+        }
     }
 }
 
@@ -25,7 +29,12 @@ export const loginAction = createAction("Login_LIST",(val)=>val)
 export const loginAsyncAction = (username,password)=>{
     return async (dispatch)=>{
         let data = await login_api(username,password);
-        
+       alert(data.data.info)
+       
         dispatch(loginAction({username,password,data}))
+        if(data.data.info==='登录成功'){
+            window.location.href='http://localhost:3000/#/mine'
+        }
+        
     }
 }

@@ -17,7 +17,7 @@ export const mapDispatchToProps = (dispatch)=>({
     handleRegister(val1,val2){
         if(val1&&val2){
             dispatch(regAsyncAction(val1,val2))
-            this.props.history.push("/login")
+           
         }
         
     },

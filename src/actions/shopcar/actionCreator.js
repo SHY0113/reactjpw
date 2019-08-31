@@ -1,7 +1,7 @@
 // import {TOGGLE_SHOP,SELECT_ALL_SHOP} from "./actionTypes"
 
 import {createAction} from "redux-actions"
-import { shopcar_api,modify_shopcar_api,del_shopcar_api ,add_collect_api,add_order_api} from "@api/mine";
+import { shopcar_api,modify_shopcar_api,del_shopcar_api ,add_collect_api,add_order_api,api} from "@api/mine";
 
 
 export const changeAction = ()=>({
@@ -30,6 +30,14 @@ export const addNumAsyncAction = (index,goodsName,goodsNum,oldPrice,nowPrice,goo
     }
 }
 
+export const addShopcarAction = createAction('ADD_SHOPCAR',(val)=>val);
+
+export const addShopcarAsyncAction = (goodsName,goodsNum,nowPrice,oldPrice,goodsImg,goodsColor,goodsType,goodsconId)=>{
+    return async (dispatch)=>{
+        let data = await api(goodsName,goodsNum,nowPrice,oldPrice,goodsImg,goodsColor,goodsType,goodsconId);
+        dispatch(addShopcarAction(data))
+    }
+}
 
 export const getGoodsAction = createAction('SELECT_SHOP',(val)=>val);
 

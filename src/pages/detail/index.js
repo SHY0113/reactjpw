@@ -5,16 +5,26 @@ import Loading from "@common/loading"
 import { Link } from "react-router-dom";
 import Swiper from "swiper"
 import "swiper/dist/css/swiper.css"
-export default class Detail extends Component {
+import { connect } from "react-redux"
+import { mapStateToProps, mapDispatchToProps } from "./connect"
+class Detail extends Component {
     constructor() {
         super();
         this.state = {
             data: [],
             isloading: false,
-            show: false
+            show: false,
+            activeIndex:0,
+            activesIndex:0,
+            goodsColor:'',
+            goodsType:'',
+            goodsconId:'',
+            num:1
         }
     }
     render() {
+       
+       // let {goodsColor,goodsType,goodsconId} = this.props
         if (this.state.isloading) {
             let dataildata = this.state.data.skudata;
             //轮播图需要的图片并去重
@@ -116,10 +126,11 @@ export default class Detail extends Component {
                     </Bottombar>
                     <Selection style={this.changeDisplay()}>
                         <div className="top">
-                            <div className="topleft"><img src="https://goods3.juancdn.com/goods/190625/5/f/5d11d6e333b08953a401b4d4_800x800.jpg?iopcmd=thumbnail&amp;type=11&amp;height=200&amp;width=200%7Ciopcmd=convert&amp;Q=80&amp;dst=jpg" alt="" /></div>
+                            <div className="topleft"><img src={dataildata.info.goods_origin_url} /></div>
                             <div className="topright">
-                                <div className="price">￥65</div>
+                                <div className="price">￥{dataildata.info.cprice}</div>
                                 <div className="please">请选择颜色尺码</div>
+                                <div></div>
                             </div>
                         </div>
                         <img className="close" onClick={this.handleFalse.bind(this)} src="https://web.juanpi.com/static/media/del.bbe4aea1.png" alt="" />
@@ -127,28 +138,28 @@ export default class Detail extends Component {
                         <div className="large">
                             {
                                 types.map((item, index) => (
-                                    <div key={index}>{item}</div>
+                                    <div key={index} onClick={this.handleClickTypes.bind(this,item,index)} className={this.state.activeIndex==index?'active':''}>{item}</div>
                                 ))
                             }
                         </div>
                         <span>{dataildata.info.fav_name}：</span>
-                        <div className="large">
+                        <div className="larges">
                             {
-                                sizes.map((item, index) => (
-                                    <div key={index}>{item}</div>
+                                sizes.map((itm, idx) => (
+                                    <div key={idx} onClick={this.handleClickSize.bind(this,itm,idx)} className={this.state.activesIndex==idx?'actives':''}>{itm}</div>
                                 ))
                             }
                         </div>
                         <div className="adddel">
                             <span>购买数量</span>
                             <div className="adnum">
-                                <span className="del">-</span>
-                                <span className="num">1</span>
-                                <span className="del">+</span>
+                                <span className="del"onClick={this.handleReudc.bind(this)}>-</span>
+                                <span className="num">{this.state.num}</span>
+                                <span className="del" onClick={this.handleAdds.bind(this)}>+</span>
                             </div>
                         </div>
 
-                        <div className="button">确定</div>
+                        <div className="button" onClick={this.props.handleClickAddShopar.bind(this,dataildata.info.goods_title,this.state.num,dataildata.info.fprice,dataildata.info.fprice,dataildata.info.goods_origin_url,this.state.goodsColor,this.state.goodsType,this.state.goodsconId)}>确定</div>
                     </Selection>
                 </Detailss>
             )
@@ -208,4 +219,38 @@ export default class Detail extends Component {
             show: false
         })
     }
+    handleClickTypes(item,index){
+       
+       this.setState({
+           activeIndex:index,
+           goodsType:item,
+           goodsconId:this.props.location.pathname.split('/')[2]
+       })
+        //this.refs.colors.style.color = 'red'
+    }
+    handleClickSize(itm,idx){
+        this.setState({
+            activesIndex:idx,
+            goodsColor:itm,
+            goodsconId:this.props.location.pathname.split('/')[2]
+        })
+       
+    }
+    handleReudc(){
+        if(this.state.num>1){
+            this.state.num--
+        }
+        this.setState({
+            num:this.state.num
+            
+        })
+    }
+    handleAdds(){
+        this.state.num++
+        this.setState({
+            num:this.state.num
+            
+        })
+    }
 }
+export default connect(mapStateToProps, mapDispatchToProps)(Detail)

@@ -1,9 +1,9 @@
 import http from "@utils/http"
 
 //注册
-export const reg_api = (usersname,password) =>http.post("/users/register",{usersname,password})
+export const reg_api = (username,password) =>http.post("/users/register",{username,password})
 //登录
-export const login_api = (usersname,password) =>http.post("/users/login",{usersname,password})
+export const login_api = (username,password) =>http.post("/users/login",{username,password})
 //加入购物车
 export const api = (goodsName,goodsNum,nowPrice,oldPrice,goodsImg,goodsColor,goodsType,goodsconId)=>http.post("/goods/add",{goodsName,goodsNum,nowPrice,oldPrice,goodsImg,goodsColor,goodsType,goodsconId})
 //查看购物车

@@ -1,43 +1,47 @@
 import React, { Component } from 'react'
 import Headers from "@components/header"
 import { MineWrapper } from "./styled"
-import {getCookie} from "@static/cookie.js"
+import { getCookie } from "@static/cookie.js"
 export default class Mine extends Component {
     render() {
         let token = getCookie('token')
+        let userInfo = getCookie('userInfo')
+
+        let username = userInfo.substring(userInfo.length - 4)
+
         return (
             <MineWrapper>
                 {
                     token ?
-                    <div className="mine_headTo" ref='mine_headTo'>
-                    <Headers title="个人中心" titleR="退出" />
-                    <div className="mine_headInfo" onClick={this.handleInfo.bind(this)}>
-                        <div className="infoImg">
-                            <img
-                                src="https://face1.juancdn.com/face/150101/0/0/default_204x204.jpg?iopcmd=thumbnail&type=11&height=80&width=80%7Ciopcmd=convert&Q=88&dst=jpg" />
-                        </div>
-                        <div className="infoR">
-                            <div className="infoName">jp_39666aba5</div>
-                            <div className="mineInfo">
-                                <span>我的账户</span>
-                                <i className="iconfont">&#xe643;</i>
+                        <div className="mine_headTo" ref='mine_headTo'>
+                            <Headers title="个人中心" titleR="退出" />
+                            <div className="mine_headInfo" onClick={this.handleInfo.bind(this)}>
+                                <div className="infoImg">
+                                    <img
+                                        src="https://face1.juancdn.com/face/150101/0/0/default_204x204.jpg?iopcmd=thumbnail&type=11&height=80&width=80%7Ciopcmd=convert&Q=88&dst=jpg" />
+                                </div>
+                                <div className="infoR">
+                                    <div className="infoName">jp_{username}6aba5</div>
+                                    <div className="mineInfo">
+                                        <span>我的账户</span>
+                                        <i className="iconfont">&#xe643;</i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                :
-                <div className="mine_head">
-                    <Headers title="个人中心" titleR="" />
-                    <div className="mine_headRL">
-                        <span onClick={this.handleReg.bind(this)}>注册</span>
-                        <span>|</span>
-                        <span onClick={this.handleLogin.bind(this)}>登录</span>
-                    </div>
-                </div>
+                        :
+                        <div className="mine_head">
+                            <Headers title="个人中心" titleR="" />
+                            <div className="mine_headRL">
+                                <span onClick={this.handleReg.bind(this)}>注册</span>
+                                <span>|</span>
+                                <span onClick={this.handleLogin.bind(this)}>登录</span>
+                            </div>
+                        </div>
                 }
-                
 
-                
+
+
                 <div className="mine_order" onClick={this.handleOrder.bind(this)}>
                     <span className="my_oreder">我的订单</span><span className="all_order">全部订单</span>
                 </div>
@@ -84,63 +88,63 @@ export default class Mine extends Component {
     }
     handleReg() {
         //注册
-        this.props.history.push({ pathname: "/register" })
+        this.props.history.push( "/register")
     }
     handleLogin() {
         //登录
-        this.props.history.push({ pathname: "/login" })
+        this.props.history.push( "/login")
     }
     handleOrder() {
         //我的订单
-        this.props.history.push({pathname:"/order"})
+        this.props.history.push( "/order")
     }
-    handleNoPay(){
+    handleNoPay() {
         //未付款
-        this.props.history.push({pathname:"/nopay"})
+        this.props.history.push( "/nopay")
     }
-    handleNoGroups(){
+    handleNoGroups() {
         //待成团
-        this.props.history.push({pathname:"/nogroup"})
+        this.props.history.push( "/nogroup")
     }
-    handleNoReceive(){
+    handleNoReceive() {
         //待收货
-        this.props.history.push({pathname:"/noreceive"})
+        this.props.history.push("/noreceive")
     }
-    handleRefund(){
+    handleRefund() {
         //退款/售后
-        this.props.history.push({pathname:"/refund"})
+        this.props.history.push( "/refund" )
     }
-    handleQuan(){
+    handleQuan() {
         //我的优惠券
-        this.props.history.push({pathname:"/quan"})
+        this.props.history.push( "/quan")
     }
-    handleCollection(){
+    handleCollection() {
         //我的收藏
-        this.props.history.push({pathname:"/collection"})
+        this.props.history.push( "/collection")
     }
-    handleTuan(){
+    handleTuan() {
         //我的拼团
-        this.props.history.push({pathname:"/tuan"})
+        this.props.history.push( "/tuan")
     }
-    handleFree(){
+    handleFree() {
         //我的免单券
-        this.props.history.push({pathname:"/free"})
+        this.props.history.push( "/free")
     }
-    handleBalance(){
+    handleBalance() {
         //我的余额
-        this.props.history.push({pathname:"/balance"})
+        this.props.history.push( "/balance")
     }
-    handleService(){
+    handleService() {
         //客服中心
-        this.props.history.push({pathname:"/server"})
+        this.props.history.push( "/server")
     }
-    handleAbout(){
+    handleAbout() {
         //关于卷皮
-        this.props.history.push({pathname:"/about"})
+        this.props.history.push( "/about")
     }
-    handleInfo(){
+    handleInfo() {
         //个人信息
-        this.props.history.push({pathname:"/info"})
+        this.props.history.push( "/info")
     }
-    
+
 }

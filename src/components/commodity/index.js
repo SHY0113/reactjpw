@@ -12,6 +12,7 @@ class Commodity extends Component {
     }
     render() {
         let {list} = this.state;
+        console.log(list)
         return (
             <Fragment>
                 {

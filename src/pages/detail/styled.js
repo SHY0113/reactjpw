@@ -101,6 +101,7 @@ export const Selection = styled.div`
                 line-height: 0.15rem;
                 text-align: left;
             }
+            
             .large{
                 display: flex;
                 flex-wrap: wrap;
@@ -121,12 +122,43 @@ export const Selection = styled.div`
                     border: 1px solid #333;
                     color: #333;
                 }
+                
+                .active{
+                    color:red
+                }
+
+            }
+            .larges{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                
+                justify-content: flex-start;
+                div{
+                    width: 1.2rem;
+                    height: 0.34rem;
+                    line-height: 0.34rem;
+                    text-align: center;
+                    font-size: 0.1rem;
+                    margin-top: 0.01rem;
+                    margin-bottom: 0.01rem;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    margin-left: 0.01rem;
+                    margin-right: 0.01rem;
+                    border: 1px solid #333;
+                    color: #333;
+                   
+            }
+            .actives{
+                color:red
             }
         
         }
     
 `
 export const Detailss = styled.div`
+    
     background-color: rgb(244, 244, 248);
     .swiper-container{
         width: 3.75rem;

@@ -8,7 +8,7 @@ import {PayingWrapper} from "./styled"
 class NoPaying extends Component {
     render() {
         let {payorder} = this.props
-        console.log(payorder)
+       
         return (
             
             <PayingWrapper>

@@ -20,7 +20,8 @@ export default class SearchDetail extends Component {
         let dataall=this.state.dataall
         return (
             <BScrollComponent ref="bscroll">
-            <div>      
+            <div>
+                
                 <Seekd>
                 <form action="" className="search-block">
                     <div className="search-input">
@@ -77,9 +78,9 @@ export default class SearchDetail extends Component {
         }
     }
     async componentDidMount(){
-        let key=this.props.match.params.value              
+        let key=this.props.match.params.value
+        
         let data=await SearchApi(key,this.state.data.page);
-        console.log(data)
         this.setState({
             data:data.data.list,
             isloading:true,
@@ -95,13 +96,10 @@ export default class SearchDetail extends Component {
                 })                                     
         }) 
     } 
-    componentDidUpdate(){
-        if(this.state.isloading){
-            this.refs.bscroll.handleRestpullingUp()
+    // componentDidUpdate(){
+    //     this.refs.bscroll.handleRestpullingUp()
         
-        }
-        
-    }
+    // }
     handelChange(e){
         let value=e.target.value;     
         this.setState({
@@ -109,13 +107,10 @@ export default class SearchDetail extends Component {
         })
     }  
     async onkeydown(e){
-        if(e.keyCode === 13){ 
-        //  this.props.history.push("/searchdetail/:"+this.state.value)
-        let key=this.state.value
-        let data=await SearchApi(key,this.state.data.page);
+        if(e.keyCode === 13){       
+        let data=await SearchApi(this.state.value);
         this.setState({
-            data:data.data.list,
-            dataall:data
+            data:data
         })
         }
         

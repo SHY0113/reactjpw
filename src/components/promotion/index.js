@@ -117,8 +117,6 @@ class Promotion extends Component {
                                                     {
                                                         item.sub_data.map((ince,index)=>(
                                                             <Link to={"/detail/"+item.goods_id} key={index}>
-
-                                                            
                                                             <div className="hikkYG" key={index}>
                                                                 <div className="kNQLMc">
                                                                     <img className="PRiOv" src={ince.pic}/>
@@ -199,6 +197,7 @@ class Promotion extends Component {
     }
     async handleClassify(pke,index){
         let data = await http.get("/api/getBrandClearanceOtherGoods", {cate_key:pke,page:1,pf:"m",brandclear:"brandclear_127_419_A"})
+        console.log(pke)
         if(index === 0){
             this.setState({
                 flas:true,

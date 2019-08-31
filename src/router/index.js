@@ -91,7 +91,8 @@ export const noTabBarRoute = [
         path: "/order",
         component: Order,
         meta: {
-            flag: true
+            flag: true,
+            auth:true
         },
         name: "订单"
     },
@@ -157,7 +158,8 @@ export const noTabBarRoute = [
         path: "/nogroup",
         component: NoGroups,
         meta: {
-            flag: true
+            flag: true,
+            auth:true
         },
         name: "待成团",
     },
@@ -165,7 +167,8 @@ export const noTabBarRoute = [
         path: "/noreceive",
         component: NoReceived,
         meta: {
-            flag: true
+            flag: true,
+            auth:true
         },
         name: "待收货",
     },
@@ -173,7 +176,8 @@ export const noTabBarRoute = [
         path: "/refund",
         component: ReFund,
         meta: {
-            flag: true
+            flag: true,
+            auth:true
         },
         name: "退款/售后",
     },
@@ -213,7 +217,8 @@ export const noTabBarRoute = [
         path: "/collection",
         component: Collection,
         meta: {
-            flag: false
+            flag: false,
+            auth:true
         },
         name: "收藏",
     },
@@ -221,7 +226,8 @@ export const noTabBarRoute = [
         path: "/tuan",
         component: Tuan,
         meta: {
-            flag: false
+            flag: false,
+            auth:true
         },
         name: "拼团",
     },
@@ -229,7 +235,8 @@ export const noTabBarRoute = [
         path: "/free",
         component: Mine,
         meta: {
-            flag: false
+            flag: false,
+            auth:true
         },
         name: "免单券",
     },
@@ -237,7 +244,8 @@ export const noTabBarRoute = [
         path: "/balance",
         component: Mine,
         meta: {
-            flag: false
+            flag: false,
+            auth:true
         },
         name: "余额",
     },
@@ -245,7 +253,8 @@ export const noTabBarRoute = [
         path: "/server",
         component: Mine,
         meta: {
-            flag: false
+            flag: false,
+            auth:true
         },
         name: "客服",
     },
@@ -253,7 +262,8 @@ export const noTabBarRoute = [
         path: "/about",
         component: About,
         meta: {
-            flag: false
+            flag: false,
+            auth:true
         },
         name: "关于",
     },
@@ -261,7 +271,8 @@ export const noTabBarRoute = [
         path: "/info",
         component: Info,
         meta: {
-            flag: false
+            flag: false,
+            auth:true
         },
         name: "个人信息"
     },
