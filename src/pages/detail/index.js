@@ -116,7 +116,7 @@ export default class Detail extends Component {
                     </Bottombar>
                     <Selection style={this.changeDisplay()}>
                         <div className="top">
-                            <div className="topleft"><img src="https://goods3.juancdn.com/goods/190625/5/f/5d11d6e333b08953a401b4d4_800x800.jpg?iopcmd=thumbnail&amp;type=11&amp;height=200&amp;width=200%7Ciopcmd=convert&amp;Q=80&amp;dst=jpg" /></div>
+                            <div className="topleft"><img src="https://goods3.juancdn.com/goods/190625/5/f/5d11d6e333b08953a401b4d4_800x800.jpg?iopcmd=thumbnail&amp;type=11&amp;height=200&amp;width=200%7Ciopcmd=convert&amp;Q=80&amp;dst=jpg" alt="" /></div>
                             <div className="topright">
                                 <div className="price">￥65</div>
                                 <div className="please">请选择颜色尺码</div>

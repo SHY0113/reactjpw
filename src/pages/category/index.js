@@ -124,12 +124,9 @@ export default class Category extends Component {
     
     async componentDidMount() {
         let id = this.props.match.params.id
-        //console.log(id)
-        let datas = await Categoryapi(id);
-        
+        let datas = await Categoryapi(id);      
         let title = datas.name;      
         let key = datas.key;
-        console.log(key)
         // 初次获取数据
         let dataneeds =await fetchJsonp ('https://shop.juanpi.com/gsort?key=' + key + '&type=50&zhouyi_ids=p8_c4_l4&machining=danpin&page='+this.state.page+'&rows=10&dtype=JSONP&price_range=&cat_threeids=&filter_id=')
             .then(res => res.json())

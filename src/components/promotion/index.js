@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Promotions} from "./styled"
-import {NavLink} from "react-router-dom"
+import {NavLink,Link} from "react-router-dom"
 import http from "@utils/http"
 import {getBrandClearanceGoods,getBrandClearanceLimitAndAds} from "@api/home"
 class Promotion extends Component {
@@ -79,6 +79,7 @@ class Promotion extends Component {
                                     <div className="heGFUq">
                                         {
                                             conse.goods.map((item,index)=>(
+                                                <Link to={"/detail/"+item.en_gid} key={index}>
                                                 <div className="dBwiwQ" key={index}>
                                                     <div className="sc-bMVAic bCzSuS">
                                                         <img className="sc-bAeIUo foAbNb"
@@ -95,7 +96,7 @@ class Promotion extends Component {
                                                         <span className="sc-gojNiO bLscwm">¥{item.gi_tuan_price}</span>
                                                         <span className="sc-daURTG bIFuUN">¥{item.gi_price}</span>
                                                     </div>
-                                                </div>
+                                                </div></Link>
                                             ))
                                         }
                                     </div>
@@ -115,6 +116,9 @@ class Promotion extends Component {
                                                 <div className="jpCDTX">
                                                     {
                                                         item.sub_data.map((ince,index)=>(
+                                                            <Link to={"/detail/"+item.goods_id} key={index}>
+
+                                                            
                                                             <div className="hikkYG" key={index}>
                                                                 <div className="kNQLMc">
                                                                     <img className="PRiOv" src={ince.pic}/>
@@ -125,6 +129,7 @@ class Promotion extends Component {
                                                                 </div>
                                                                 <div className="cYVKNa">{ince.title}</div>
                                                             </div>
+                                                            </Link>
                                                         ))
                                                     }
                                                 </div>
@@ -151,14 +156,16 @@ class Promotion extends Component {
                                    {
                                        datas.map((item,index)=>(
                                            <div className="lisepst" key={index}>
-                                               <div className="hjmAMV">
-                                                   <img className="emNqIh" src={item.pic_url}/>
-                                               </div>
-                                               <div className="klxPuT">
-                                                   <span className="efvkRd">{item.cprice}</span>
-                                                   <span className="dssBBx">¥{item.oprice}</span>
-                                               </div>
-                                               <span className="sLECb">{item.title}</span>
+                                               <Link to={"/detail/"+item.goods_id}>
+                                                <div className="hjmAMV">
+                                                    <img className="emNqIh" src={item.pic_url}/>
+                                                </div>
+                                                <div className="klxPuT">
+                                                    <span className="efvkRd">{item.cprice}</span>
+                                                    <span className="dssBBx">¥{item.oprice}</span>
+                                                </div>
+                                                <span className="sLECb">{item.title}</span>
+                                               </Link>
                                            </div>
                                        ))
                                    }
@@ -192,7 +199,6 @@ class Promotion extends Component {
     }
     async handleClassify(pke,index){
         let data = await http.get("/api/getBrandClearanceOtherGoods", {cate_key:pke,page:1,pf:"m",brandclear:"brandclear_127_419_A"})
-        console.log(pke)
         if(index === 0){
             this.setState({
                 flas:true,

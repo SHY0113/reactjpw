@@ -1,6 +1,6 @@
 import React , {Component} from "react";
 import {Purchases} from "./styled"
-import {NavLink} from "react-router-dom"
+import {NavLink,Link} from "react-router-dom"
 import fetchJsonp from 'fetch-jsonp'
 export default class Purchase extends Component{
     constructor(){
@@ -27,6 +27,7 @@ export default class Purchase extends Component{
                         {
                             sorts.map((item,index)=>(
                                 <div className="gCgGoL" key={index}>
+                                    <Link to={'/detail/'+item.goods_id}>
                                     <img src={item.pic_url} alt=""/>
                                     <div className="godosName">
                                         <img src={item.shop_logo} alt=""/>
@@ -37,6 +38,7 @@ export default class Purchase extends Component{
                                     </div>
                                     <div className="dFUsnh">{item.title}</div>
                                     <div className="sewak">{item.residue}</div>
+                                    </Link>
                                 </div>
                             ))
                         }

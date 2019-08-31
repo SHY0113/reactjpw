@@ -23,91 +23,91 @@ class Fur extends Component {
             console.log(storeInfo)
             return (
                 <Furse>
-                    {/*<div className="hedder">*/}
-                    {/*    <NavLink to={"/home"} className="iconfont">&#xe6a5;</NavLink>*/}
-                    {/*    <p>姣雅皮草大会</p>*/}
-                    {/*    <i className="iconfont">&#xe62a;</i>*/}
-                    {/*</div>*/}
-                    {/*<div className="jokmto">*/}
+                     <div className="hedder">
+                        <NavLink to={"/home"} className="iconfont">&#xe6a5;</NavLink>
+                        <p>姣雅皮草大会</p>
+                        <i className="iconfont">&#xe62a;</i>
+                    </div>
+                    <div className="jokmto">
 
-                    {/*    <div className="cQHFIx">*/}
-                    {/*        <div className="fAbHwE">*/}
+                        <div className="cQHFIx">
+                            <div className="fAbHwE">
 
-                    {/*            <div className="haSPZA">*/}
-                    {/*                <img className="sc-jKJlTe fybUyr"*/}
-                    {/*                     src={storeInfo.logo}/>*/}
-                    {/*            </div>*/}
+                                <div className="haSPZA">
+                                    {/* <img className="sc-jKJlTe fybUyr"
+                                         src={storeInfo.logo}/> */}
+                                </div>
 
-                    {/*            <div className="iuwpVa">*/}
-                    {/*                <p className="sc-hMqMXs ggRoE">{storeInfo.title}</p>*/}
-                    {/*                <p className="sc-kEYyzF jpfFsg">共113件商品</p>*/}
-                    {/*            </div>*/}
+                                <div className="iuwpVa">
+                                    {/* <p className="sc-hMqMXs ggRoE">{storeInfo.title}</p> */}
+                                    <p className="sc-kEYyzF jpfFsg">共113件商品</p>
+                                </div>
 
-                    {/*            <div className="jmbXZH">*/}
+                                <div className="jmbXZH">
 
-                    {/*            </div>*/}
-                    {/*        </div>*/}
-                    {/*        <div className="lmnFtO">*/}
-                    {/*            <div className="daJzJm">*/}
-                    {/*                <span>￥</span>*/}
-                    {/*                <span>20</span>*/}
-                    {/*            </div>*/}
-                    {/*            <div className="jxmGSK">*/}
-                    {/*                <span>满20元可用</span>*/}
-                    {/*                <span>仅限当前专场使用</span>*/}
-                    {/*            </div>*/}
-                    {/*            <div className="hyVErz">*/}
-                    {/*                <span>抢光了</span>*/}
-                    {/*            </div>*/}
-                    {/*        </div>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
-                    {/*<div className="bqGekT">*/}
-                    {/*    <p>距离结束还剩</p>*/}
-                    {/*    <span>{this.state.day}天 {this.state.hour}时{this.state.minute}分{this.state.second}秒</span>*/}
-                    {/*</div>*/}
-                    {/*<div className="hQoDnQ">*/}
-                    {/*    <div className="hqoDns">*/}
-                    {/*        {*/}
-                    {/*            brandgood.map((item, index) => (*/}
-                    {/*                <div key={index}>{item[0].tabname}</div>*/}
-                    {/*            ))*/}
-                    {/*        }*/}
-                    {/*    </div>*/}
+                                </div>
+                            </div>
+                            <div className="lmnFtO">
+                                <div className="daJzJm">
+                                    <span>￥</span>
+                                    <span>20</span>
+                                </div>
+                                <div className="jxmGSK">
+                                    <span>满20元可用</span>
+                                    <span>仅限当前专场使用</span>
+                                </div>
+                                <div className="hyVErz">
+                                    <span>抢光了</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="bqGekT">
+                        <p>距离结束还剩</p>
+                        <span>{this.state.day}天 {this.state.hour}时{this.state.minute}分{this.state.second}秒</span>
+                    </div>
+                    <div className="hQoDnQ">
+                        <div className="hqoDns">
+                            {/* {
+                                brandgood.map((item, index) => (
+                                    <div key={index}>{item[0].tabname}</div>
+                                ))
+                            } */}
+                        </div>
 
-                    {/*</div>*/}
-                    {/*<div className="list-over">*/}
-                    {/*    {*/}
-                    {/*        brandgood.map((item, index) => (*/}
-                    {/*            <div key={index}>*/}
-                    {/*                <div className="duNiVz">*/}
-                    {/*                    <span> - {item[0].tabname} - </span>*/}
-                    {/*                </div>*/}
-                    {/*                <div className="Nav-goods">*/}
-                    {/*                    <div className="goods_nav">*/}
-                    {/*                        {*/}
-                    {/*                            item.map((ince, index) => (*/}
-                    {/*                                ince.goods_id ?*/}
-                    {/*                                    <div className="goods-list" key={index}>*/}
-                    {/*                                        <img className="sc-iQKALj fIOCtV"*/}
-                    {/*                                             src={ince.pic_url}/>*/}
-                    {/*                                        <div className="sc-bwCtUz dQSbPX">*/}
-                    {/*                                            <span className="sc-eTuwsz eDzHVz">¥{ince.cprice}</span>*/}
-                    {/*                                            <span className="sc-gwVKww kBfwjF">¥{ince.oprice}</span>*/}
-                    {/*                                        </div>*/}
-                    {/*                                        <div className="sc-bsbRJL cAntPj">{ince.title}</div>*/}
-                    {/*                                    </div> : ''*/}
+                    </div>
+                    <div className="list-over">
+                        {/* {
+                            brandgood.map((item, index) => (
+                                <div key={index}>
+                                    <div className="duNiVz">
+                                        <span> - {item[0].tabname} - </span>
+                                    </div>
+                                    <div className="Nav-goods">
+                                        <div className="goods_nav">
+                                            {
+                                                item.map((ince, index) => (
+                                                    ince.goods_id ?
+                                                        <div className="goods-list" key={index}>
+                                                            <img className="sc-iQKALj fIOCtV"
+                                                                 src={ince.pic_url}/>
+                                                            <div className="sc-bwCtUz dQSbPX">
+                                                                <span className="sc-eTuwsz eDzHVz">¥{ince.cprice}</span>
+                                                                <span className="sc-gwVKww kBfwjF">¥{ince.oprice}</span>
+                                                            </div>
+                                                            <div className="sc-bsbRJL cAntPj">{ince.title}</div>
+                                                       </div> : ''
 
 
-                    {/*                            ))*/}
-                    {/*                        }*/}
+                                               ))
+                                           }
 
-                    {/*                    </div>*/}
-                    {/*                </div>*/}
-                    {/*            </div>*/}
-                    {/*        ))*/}
-                    {/*    }*/}
-                    {/*</div>*/}
+                                       </div>
+                                    </div>
+                                </div>
+                           ))
+                       } */}
+                    </div>
                 </Furse>
             );
         } else {

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Seckill} from "./styled"
-import {NavLink} from "react-router-dom"
+import {NavLink,Link} from "react-router-dom"
 import {timebuy,getTable} from "@api/home"
 import Swiper from "swiper"
 
@@ -55,7 +55,9 @@ class Ms extends Component {
                     <div className="goods-list">
                         {
                             timeb.map((item,index) => (
+                                <Link to={"/detail/"+item.goods_id}>
                                 <div className="lists" key={index}>
+                                    
                                     <div className="img_box">
                                         <img className="lazy loaded"
                                              src={item.pic_url}/>
@@ -74,7 +76,8 @@ class Ms extends Component {
                                         </p>
                                         <span className="buy_btn">{item.mkt_text}</span>
                                     </div>
-                                </div>
+                                    
+                                </div></Link>
                             ))
                         }
                     </div>

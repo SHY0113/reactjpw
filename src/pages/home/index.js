@@ -66,18 +66,18 @@ export default class Home extends Component {
                             <img src="https://s2.juancdn.com/jas/190826/0/4/5d63378733b08935ab4f6cab_540x656.gif"
                                  alt=""/>
                         </NavLink>
-                        <NavLink to={"/promotion"} className="clearance">
-                            <div className="clearanceName">
+                        <div className="clearance">
+                            <NavLink to={"/promotion"} className="clearanceName">
                                 <img
                                     src="https://goods6.juancdn.com/jas/190823/a/b/5d5f427d33b0896e6a33ab1f_540x328.png?imageMogr2/quality/85!/format/png"
                                     alt=""/>
-                            </div>
+                            </NavLink>
                             <NavLink to={"/life"} className="clearanceName">
                                 <img
                                     src="https://goods3.juancdn.com/jas/190823/5/2/5d5f435533b0896a4b24c711_540x328.png?iopcmd=convert&Q=85&dst=png"
                                     alt=""/>
                             </NavLink>
-                        </NavLink>
+                        </div>
                     </div>
                     <NavLink to={"/fur"} className="gipzik">
                         <img src="https://s2.juancdn.com/jas/190822/1/5/5d5e4cd1b6f8ea09ce5ef5e7_1080x300.gif" alt=""/>
