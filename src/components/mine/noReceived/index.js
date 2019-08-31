@@ -39,7 +39,9 @@ import {ReceivedWrapper} from "./styled"
         )
     }
     async componentDidMount(){
+        
         this.props.handleGetOrders()
     }
+
 }
 export default connect(mapStateToProps,mapDispatchToProps)(Order)

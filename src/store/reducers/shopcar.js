@@ -3,7 +3,10 @@ import { handleActions } from "redux-actions";
 const defaultState = {
     goods: [],
     selectedAll: true,
-    goodsNUM: 0
+    goodsNUM: 0,
+    goodsColor:'',
+    goodsType:'',
+    goodsconId:''
 }
 
 export default handleActions({
@@ -65,6 +68,9 @@ export default handleActions({
         return state
     },
     ADD_COLLECT:(state,action)=>{
+        return state
+    },
+    ADD_SHOPCAR:(state,action)=>{
         return state
     }
 

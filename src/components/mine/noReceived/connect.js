@@ -6,6 +6,8 @@ export const mapStateToProps=(state)=>({
 export const mapDispatchToProps = (dispatch)=>({
     handleGetOrders(){
         dispatch(getOrdersAsyncAction())
+        this.history.push('/noreceive')
+       
     },
     handleClickfirm(goodsName,goodsNum,oldPrice,nowPrice,goodsImg,goodsColor,goodsType,goodsconId,status,id){
         this.props.history.push('/refund')

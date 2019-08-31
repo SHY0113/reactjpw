@@ -18,7 +18,8 @@ export const mapDispatchToProps = (dispatch)=>({
       
         if(val1&&val2){
             dispatch(loginAsyncAction(val1,val2))
-            this.props.history.push("/mine")
+            
+            
         }
         
     },
