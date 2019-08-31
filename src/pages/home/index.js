@@ -22,7 +22,7 @@ export default class Home extends Component {
             <Homes>
                 <div className="tabls">
                     <div className="headers">
-                        <NavLink to={"/seek"} className="seek">
+                        <NavLink to={"/search"} className="seek">
                             <i className="iconfont">&#xe60b;</i>
                             <div className="did">
                                 <img src="https://s1.juancdn.com/bao/170926/8/2/59ca3863a9fcf823cd42cfcb_84x60.png"/>

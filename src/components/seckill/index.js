@@ -87,10 +87,10 @@ class Ms extends Component {
                         {/*https://goods6.juancdn.com/bao/180228/a/7/5a96132fa9fcf83c1262f480_150x150.png*/}
                         <img src="https://goods5.juancdn.com/bao/180228/9/8/5a96130e8150a14cc160d303_150x150.png" alt=""/>
                     </div>
-                    <div>
+                    <NavLink to={"/promotion"}>
                         {/*https://goods6.juancdn.com/bao/180228/a/0/5a96136aa9fcf83bf17cbdbf_150x150.png*/}
                         <img src="https://goods6.juancdn.com/bao/180228/a/0/5a96134fa9fcf83b79185730_150x150.png" alt=""/>
-                    </div>
+                    </NavLink>
                 </div>
             </Seckill>
         );
